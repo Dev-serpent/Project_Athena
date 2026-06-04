@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project ATHENA — Autonomous AI Operating Layer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <canvas id="neuralCanvas"></canvas>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">ATHENA<span class="pulse-dot"></span></div>
+            <div class="nav-links">
+                <a href="#vision">Vision</a>
+                <a href="#architecture">Architecture</a>
+                <a href="#features">Capabilities</a>
+                <a href="#loop">Agent Loop</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <div class="badge">PROJECT ATHENA</div>
+            <h1>The Autonomous Intelligence Layer for Linux</h1>
+            <p class="hero-sub">ATHENA transforms your system into an intelligent, self-operating environment capable of reasoning, planning, executing tasks, and learning entirely offline.</p>
+            
+            <div class="statement-box">
+                <div class="statement-line"><span class="highlight-red">✕</span> Not a chatbot.</div>
+                <div class="statement-line"><span class="highlight-red">✕</span> Not an assistant.</div>
+                <div class="statement-line"><span class="highlight-cyan">✓</span> An autonomous AI operating layer built directly into your machine.</div>
+            </div>
+
+            <div class="cta-group">
+                <a href="#vision" class="btn btn-primary">Launch Vision</a>
+                <a href="#architecture" class="btn btn-secondary">Explore Architecture</a>
+            </div>
+        </div>
+
+        <div class="orb-container">
+            <div class="orb-wrapper">
+                <div class="ai-core-orb" id="aiOrb"></div>
+                <div class="orbital-ring ring-1"></div>
+                <div class="orbital-ring ring-2"></div>
+                <div class="orbital-ring ring-3"></div>
+            </div>
+        </div>
+    </header>
+
+    <section id="vision" class="vision-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">01 // PHILOSOPHY</span>
+                <h2>Intelligence Without Boundaries</h2>
+                <p>ATHENA is designed as a self-contained digital intelligence capable of understanding goals and executing complex workflows locally.</p>
+            </div>
+            
+            <div class="vision-cycle-box">
+                <h3>Every action follows a continuous reasoning cycle:</h3>
+                <div class="cycle-runner">
+                    <span class="cycle-step">Think</span>
+                    <span class="cycle-arrow">→</span>
+                    <span class="cycle-step">Plan</span>
+                    <span class="cycle-arrow">→</span>
+                    <span class="cycle-step">Execute</span>
+                    <span class="cycle-arrow">→</span>
+                    <span class="cycle-step">Observe</span>
+                    <span class="cycle-arrow">→</span>
+                    <span class="cycle-step">Learn</span>
+                </div>
+            </div>
+
+            <div class="vision-grid">
+                <div class="vision-card">
+                    <h4>No Cloud Dependency</h4>
+                    <p>Completely immune to server outages and internet availability. Operates locally with absolute autonomy.</p>
+                </div>
+                <div class="vision-card">
+                    <h4>No External APIs</h4>
+                    <p>Leverages local optimized LLMs running directly on hardware infrastructure via ultra-fast local runtimes.</p>
+                </div>
+                <div class="vision-card">
+                    <h4>No Data Leaks</h4>
+                    <p>Your inputs, code execution, environment states, and system history never leave your hard drive.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="architecture" class="arch-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">02 // SYSTEM SCHEMATIC</span>
+                <h2>The ATHENA Core Pipeline</h2>
+                <p>A highly cohesive modular architecture built for rapid parsing, deep decision tree expansion, and bare-metal tool execution.</p>
+            </div>
+
+            <div class="pipeline-container">
+                <div class="pipeline-line">
+                    <div class="pipeline-progress" id="pipelineProgress"></div>
+                </div>
+
+                <div class="pipeline-card" data-step="1">
+                    <div class="card-icon">🎤</div>
+                    <div class="card-info">
+                        <h3>Human Interface Layer</h3>
+                        <p>Voice integration (Whisper.cpp / Vosk offline speech-to-text) and asynchronous multi-modal terminal interface prompts.</p>
+                    </div>
+                </div>
+
+                <div class="pipeline-card" data-step="2">
+                    <div class="card-icon">🧠</div>
+                    <div class="card-info">
+                        <h3>Local Intelligence Core</h3>
+                        <p>The reasoning foundation. Hosts local, low-latency quantized models like Mistral 7B, LLaMA 3, and Phi-3 via Ollama or Llama.cpp.</p>
+                    </div>
+                </div>
+
+                <div class="pipeline-card" data-step="3">
+                    <div class="card-icon">🧭</div>
+                    <div class="card-info">
+                        <h3>Autonomous Planner</h3>
+                        <p>Decomposes macro user intents into micro-subgoals, manages dynamic operational error recovery, and performs target prioritization.</p>
+                    </div>
+                </div>
+
+                <div class="pipeline-card" data-step="4">
+                    <div class="card-icon">🛠️</div>
+                    <div class="card-info">
+                        <h3>Tool Execution Layer</h3>
+                        <p>The operational hands. Handles secure sandbox terminal scripting, custom Python automation pipelines, and direct Android Debug Bridge operations.</p>
+                    </div>
+                </div>
+
+                <div class="pipeline-card" data-step="5">
+                    <div class="card-icon">👁️</div>
+                    <div class="card-info">
+                        <h3>Perception Engine</h3>
+                        <p>Grants deep system visual awareness via automated window capture frames, Tesseract OCR reading, and active window layout calculations.</p>
+                    </div>
+                </div>
+
+                <div class="pipeline-card" data-step="6">
+                    <div class="card-icon">💾</div>
+                    <div class="card-info">
+                        <h3>Persistent Memory Matrix</h3>
+                        <p>Multi-tiered state storage using lightweight vector databases (FAISS/Chroma) and SQLite logs for contextual long-term retention.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="features" class="features-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">03 // CAPABILITIES MATRIX</span>
+                <h2>Engineered For Deep Control</h2>
+            </div>
+
+            <div class="grid-layout">
+                <div class="feat-box">
+                    <div class="feat-head">Autonomous Reasoning</div>
+                    <p>Breaks complex, vague conversational instructions into precise structural scripts and iterative execution chains seamlessly.</p>
+                </div>
+                <div class="feat-box">
+                    <div class="feat-head">Offline Intelligence</div>
+                    <p>Zero tracking, zero cloud connections. Runs heavy operations utilizing highly optimized 4-bit and 8-bit local model quantizations.</p>
+                </div>
+                <div class="feat-box">
+                    <div class="feat-head">System Automation</div>
+                    <p>Direct interaction with system background daemons, package trees, filesystem operations, and isolated shell script runtime tools.</p>
+                </div>
+                <div class="feat-box">
+                    <div class="feat-head">Persistent Memory</div>
+                    <p>Builds a deep understanding of standard user tendencies over long execution logs without bloating localized indices.</p>
+                </div>
+                <div class="feat-box">
+                    <div class="feat-head">Visual Perception</div>
+                    <p>Reads what's displayed on screen in real-time, matching parsed layout coordinate metrics directly with text-based UI trees.</p>
+                </div>
+                <div class="feat-box">
+                    <div class="feat-head">Linux-Native Integration</div>
+                    <p>Tailored directly to interface cleanly with native low-level terminal tools, security networks, and kernel environment hooks.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="loop" class="loop-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">04 // TELEMETRY CYCLE</span>
+                <h2>How ATHENA Thinks</h2>
+                <p>An ongoing loop of perception, deduction, execution, and verification.</p>
+            </div>
+
+            <div class="interactive-loop-display">
+                <div class="loop-center">
+                    <div class="loop-core-text">AGENT<br>LOOP</div>
+                </div>
+                <div class="loop-node node-1" data-desc="User drops text command or triggers voice audio capture.">Input</div>
+                <div class="loop-node node-2" data-desc="Local LLM evaluates structural semantics and parameters.">Interpret</div>
+                <div class="loop-node node-3" data-desc="Planner builds task timeline blocks and priority trees.">Plan</div>
+                <div class="loop-node node-4" data-desc="System calls localized scripts, ADB pipelines, or utilities.">Select Tool</div>
+                <div class="loop-node node-5" data-desc="Payload triggers within target shell context environment safely.">Execute</div>
+                <div class="loop-node node-6" data-desc="Perception checks returns, screen arrays, and exit state codes.">Observe</div>
+                <div class="loop-node node-7" data-desc="Saves execution results to internal vector indexes.">Remember</div>
+            </div>
+            
+            <div class="loop-description-box" id="loopDesc">
+                Hover over any node in the system telemetry network cycle above to watch the agent execution cascade sequence update live.
+            </div>
+        </div>
+    </section>
+
+    <section class="hardware-alert-section">
+        <div class="container">
+            <div class="hardware-card">
+                <div class="hw-accent"></div>
+                <h3>Hardware Optimization Note</h3>
+                <p>ATHENA is highly tailored for extreme efficiency. By utilizing low-footprint engines like <code>llama.cpp</code> alongside small quantized parameter sets (such as Phi-3 Mini), full autonomous pipeline execution runs efficiently on consumer machines, including 2nd Gen Intel i3 setups, without memory thrashing.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container footer-content">
+            <p>Project ATHENA — Fully Offline AI Operating Layer.</p>
+            <p class="footer-subtext">Built to bridge natural language processing directly into systemic Linux kernels securely.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
